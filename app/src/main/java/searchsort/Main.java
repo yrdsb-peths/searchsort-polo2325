@@ -9,14 +9,16 @@ public class Main {
         int[] arr1 = { 1, 2, 3, 4, 5 };
         Util.exch(arr1, 0, 1);
         for (int i = 0; i < arr1.length; i++) {
-            System.out.print(arr1[i] + " ");
+            System.out.println(arr1[i] + " ");
         }
 
         // Test Util.shuffle
         int[] arr = { 1, 2, 3, 4, 5 };
-        Util.shuffle(arr, 12345L); // 12345L converts the number to a long
+        Util.shuffle(arr, 12343L); // 12345L converts the number to a long
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+            System.out.println(arr[i] + " ");
         }
+
+
     }
 }

@@ -13,6 +13,6 @@ public class MergeSort extends Sort {
      * Merge the two sorted arrays left and right into the array arr.
      */
     private void merge(int[] arr, int[] left, int[] right) {
-
+        
     }
 }
