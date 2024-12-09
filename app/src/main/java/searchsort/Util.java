@@ -20,11 +20,20 @@ public class Util {
      * 
      * @return The shuffled array.
      */
+
+    static Random rand = new Random();
+
     public static int[] shuffle(int[] arr, Long seed) {
         // Initialize a Random object with the given seed if provided
         Random random = (seed != null) ? new Random(seed) : new Random();
         // Note: This generates a random number between 0 and 5:
         // int randomNum = random.nextInt(6);
+        int randomNum;
+
+        for (int i = 1; i < arr.length; i++) {
+            randomNum = random.nextInt(i+1);
+            exch(arr, i, randomNum);
+        }
 
         return arr;
     }
@@ -44,6 +53,9 @@ public class Util {
     public static int[] generateRandomArray(int n, Long seed) {
         // Create a new integer array of size n
         int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(n-1);
+        }
         // Shuffle the array using the Shuffle method with the given seed
         shuffle(arr, seed);
         // Return the shuffled array
