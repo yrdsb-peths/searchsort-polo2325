@@ -1,5 +1,7 @@
 package searchsort;
 
+// import static org.junit.jupiter.api.Assertions.assertTrue;
+
 /**
  * Main class for manually testing your code.
  */
@@ -11,14 +13,21 @@ public class Main {
         for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i] + " ");
         }
+        System.out.println();
 
-        // Test Util.shuffle
-        int[] arr = { 1, 2, 3, 4, 5 };
-        Util.shuffle(arr, 12343L); // 12345L converts the number to a long
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
+        MergeSort m = new MergeSort();
+
+        // int[] arr9 = Util.generateRandomArray(200000, 12345L);
+        // m.sort(arr9);
+        // for (int i = 0; i < arr9.length; i++) {
+        //     System.out.print(arr9[i] + " ");
+        // }
+
+        System.out.println();
+        int[] arr9 = Util.generateRandomArray(10, 12345L);
+        for (int i = 0; i < arr9.length; i++) {
+            System.out.print(arr9[i] + " ");
         }
-      
-
+        
     }
 }
