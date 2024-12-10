@@ -15,8 +15,6 @@ public class Main {
         }
         System.out.println();
 
-        MergeSort m = new MergeSort();
-
         // int[] arr9 = Util.generateRandomArray(200000, 12345L);
         // m.sort(arr9);
         // for (int i = 0; i < arr9.length; i++) {
