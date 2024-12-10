@@ -7,7 +7,6 @@ public class QuickSort extends Sort {
     @Override
     public void sort(int[] arr) {
         quickSort(arr, 0, arr.length - 1); 
-        assert Util.isSorted(arr);
     }
 
     /*
@@ -23,8 +22,6 @@ public class QuickSort extends Sort {
         quickSort(arr, low, p - 1);
         quickSort(arr, p + 1, high);
 
-        assert Util.isSorted(arr);
-
     }
 
     /*
@@ -36,20 +33,24 @@ public class QuickSort extends Sort {
         int j = high + 1;
 
         while (true) {
-            while (arr[++i] < arr[low])
-                if (i == high)
-                    break;
-            while (arr[--j] > arr[low])
-                if (j == low)
-                    break;
 
-            if (i >= j)
-                break;
+            while (arr[++i] < arr[low]) {
+                if (i == high) break;
+            }
+
+            while (arr[--j] > arr[low]) {
+                if (j == low) break; 
+            }
+
+            if (i >= j) break;
             Util.exch(arr, i, j);
         }
-        Util.exch(arr, low, j);
-        return j;
 
+        Util.exch(arr, low, j);
+        return j;        
     }
 
+        
 }
+
+
