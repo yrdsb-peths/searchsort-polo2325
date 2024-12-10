@@ -54,7 +54,7 @@ public class Util {
         // Create a new integer array of size n
         int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = rand.nextInt(n-1);
+            arr[i] = i;
         }
         // Shuffle the array using the Shuffle method with the given seed
         shuffle(arr, seed);
