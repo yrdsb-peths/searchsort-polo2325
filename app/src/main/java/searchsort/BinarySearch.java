@@ -32,7 +32,7 @@ public class BinarySearch extends Search {
      */
     @Override
     public int recursiveFind(int[] arr, int target) {
-        if()
+        // if(target )
 
         return -1;
     }
