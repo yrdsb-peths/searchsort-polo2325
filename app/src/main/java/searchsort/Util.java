@@ -30,7 +30,7 @@ public class Util {
         // int randomNum = random.nextInt(6);
         int randomNum;
 
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = arr.length-1; i >= 1; i--) {
             randomNum = random.nextInt(i+1);
             exch(arr, i, randomNum);
         }
